@@ -2,24 +2,42 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
-import Navbar from './components/Navbar.jsx'
+import Navbar from './components/Navbar'
 import Search from './components/Search.jsx'
 import Cards from './components/Cards.jsx'
 import Footer from './components/Footer.jsx'
+import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
+import Dashboard from './components/Dashboard.jsx'
+import Login from './components/Login.jsx'
+import About from './components/About.jsx'
 function App() {
+  let password=123
+  let userName="Felix"
   return (
     <>
-    <Navbar/>
-    <Search/>
-    <div className='flex'>
-    <Cards newsImage="https://ichef.bbci.co.uk/news/1024/cpsprodpb/af61/live/10d18900-605c-11ef-b3ab-d92ed8dd7357.jpg.webp" heading="Diplomatic tightrope for Modi as he visits Kyiv after Moscow" description="Indian Prime Minister Narendra Modi is in Ukraine on Friday to hold talks with President Volodymyr Zelensky. The trip comes just weeks after he met Russian President Vladimir Putin in Moscow."/>
-    <Cards newsImage="https://ichef.bbci.co.uk/news/1024/cpsprodpb/af61/live/10d18900-605c-11ef-b3ab-d92ed8dd7357.jpg.webp" heading="Diplomatic tightrope for Modi as he visits Kyiv after Moscow" description="Indian Prime Minister Narendra Modi is in Ukraine on Friday to hold talks with President Volodymyr Zelensky. The trip comes just weeks after he met Russian President Vladimir Putin in Moscow."/>
-    <Cards newsImage="https://ichef.bbci.co.uk/news/1024/cpsprodpb/af61/live/10d18900-605c-11ef-b3ab-d92ed8dd7357.jpg.webp" heading="Diplomatic tightrope for Modi as he visits Kyiv after Moscow" description="Indian Prime Minister Narendra Modi is in Ukraine on Friday to hold talks with President Volodymyr Zelensky. The trip comes just weeks after he met Russian President Vladimir Putin in Moscow."/>
-    <Cards newsImage="https://ichef.bbci.co.uk/news/1024/cpsprodpb/af61/live/10d18900-605c-11ef-b3ab-d92ed8dd7357.jpg.webp" heading="Diplomatic tightrope for Modi as he visits Kyiv after Moscow" description="Indian Prime Minister Narendra Modi is in Ukraine on Friday to hold talks with President Volodymyr Zelensky. The trip comes just weeks after he met Russian President Vladimir Putin in Moscow."/>
-    </div>
-    <br>
-    </br>
-    <Footer/>
+    {/* <Router> */}
+      {/* <Navbar/>
+      <Search />
+      <Routes>
+      
+      <Route path='/' element={password===123 && userName==="Felix" ? <Dashboard/> : <Login/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Footer/>
+      </Routes> */}
+    {/* </Router> */}
+    
+    <Router>
+      <Navbar/>
+      <Search/>
+      <Routes>
+        <Route path='/' element={<Dashboard/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/login' element={<Login/>}/>
+      </Routes>
+      <Footer/>
+    </Router>
+    
     </>
   )
 }
