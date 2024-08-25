@@ -10,6 +10,7 @@ import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
 import Dashboard from './components/Dashboard.jsx'
 import Login from './components/Login.jsx'
 import About from './components/About.jsx'
+import TopNewsSection from './components/TopNewsSection.jsx'
 function App() {
   let password=123
   let userName="Felix"
@@ -30,10 +31,13 @@ function App() {
     <Router>
       <Navbar/>
       <Search/>
+      {/* <h1 className="text-center text-4xl p-4">Today's Short News</h1> */}
       <Routes>
         <Route path='/' element={<Dashboard/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/topNews' element={<TopNewsSection/>}/>
+
       </Routes>
       <Footer/>
     </Router>

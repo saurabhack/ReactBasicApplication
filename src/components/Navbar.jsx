@@ -66,28 +66,19 @@ return(
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">
             {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-            <NavLink to="/">  
+            <NavLink to="/" className="text-white">  
               Home
               </NavLink>
-            <NavLink to="/about">
+            <NavLink to="/about" className="text-white">
             About Us
             </NavLink>
-            <NavLink to="login">
+            <NavLink to="login" className="text-white">
               Login
             </NavLink>
 
-            <a
-              href="#"
-              className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >
-              Our Products
-            </a>
-            <a
-              href="#"
-              className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >
-              Our Parteners
-            </a>
+            <NavLink to="topNews" className="text-white">
+              Top News
+              </NavLink>
           </div>
         </div>
       </div>

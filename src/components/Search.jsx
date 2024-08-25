@@ -10,7 +10,7 @@ function Search(){
         />
       </div>
     </div>
-    <h1 className="text-center text-4xl p-4">Today's Short News</h1>
+    
         </>
     )
 }
